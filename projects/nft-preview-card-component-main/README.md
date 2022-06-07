@@ -11,3 +11,19 @@ Users should be able to:
 ## Screenshot Of The Final Solution
 
 <img src="./images/finalsolution.png">
+
+## Links
+
+You can find my solution online at:
+
+- Github pages [https://enzobocalon.github.io/frontendmentor/projects/nft-preview-card-component-main/]
+
+## What I learned
+
+- HTML 5 markups;
+- CSS containers behavior;
+- Transitions using CSS;
+- Flex box;
+
+## Author
+- Enzo Bocalon [https://github.com/enzobocalon/]
