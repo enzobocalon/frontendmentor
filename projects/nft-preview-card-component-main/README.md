@@ -5,8 +5,8 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 ## The Challenge
 Users should be able to:
 
-- View the optimal layout depending on their device's screen size
-- See hover states for interactive elements
+- View the optimal layout depending on their device's screen size;
+- See hover states for interactive elements;
 
 ## Screenshot Of The Final Solution
 
@@ -24,6 +24,10 @@ You can find my solution online at:
 - CSS containers behavior;
 - Transitions using CSS;
 - Flex box;
+
+## Useful Resources
+
+- [https://www.w3schools.com/howto/howto_css_image_overlay_icon.asp] - This website helped me when I had to create the hover effect on the NFT image
 
 ## Author
 - Enzo Bocalon [https://github.com/enzobocalon/]
