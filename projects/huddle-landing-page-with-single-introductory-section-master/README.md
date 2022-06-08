@@ -12,7 +12,7 @@ The main goal is to create a landing page by using Flexbox and some CSS selector
 
 You can find my solution online at:
 
-- Github pages []
+- Github pages [https://enzobocalon.github.io/frontendmentor/projects/huddle-landing-page-with-single-introductory-section-master/]
 
 ## Useful Resources
 
