@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100vh;
+    width: 100%;
+    font-size: 15px;
+    font-family: 'League Spartan', sans-serif;
+    background-image: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
+    background-position: top, bottom;
+    background-repeat: no-repeat;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#top{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 50%;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#title{
+    height: auto;
+    width: 25%;
+    margin-left: 50px;
+}
+
+#title h1{
+    font-weight: 800;
+    font-size: 60px;
+    margin-bottom: 30px;
+    color: hsl(300, 43%, 22%);
+}
+
+#title p{
+    font-weight: 400;
+    font-size: 20px;
+    color: hsl(303, 10%, 53%);
+    line-height: 30px;
+}
+
+.stars{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.stars-text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#rates{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 30%;
+    margin: 40px 0;
+}
+
+.rate{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    background-color: #f6f3f8;
+    margin: 10px 0;
+    padding: 20px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+
+.rate:nth-child(2){
+    margin-left: 40px;
+}
+
+.rate:nth-child(3){
+    margin-left: 80px;
+}
+
+.rate span{
+    padding-left: 20px;
+    color: hsl(300, 43%, 22%);
+    font-weight: 800;
+}
+
+.rate img{
+    padding: 5px;
+}
+
+
+#bot{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 300px;
+    width: 100%;
+}
+
+.review{
+    margin-top: 100px;
+    background-color: hsl(300, 43%, 22%);
+    width: 20%;
+    height: 80%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.review:nth-child(2){
+    margin: 20px 60px 0 60px;
+}
+
+.review:nth-child(3){
+    margin-top: 40px;
+}
+
+.review p{
+    width: 80%;
+    margin-top: 10px;
+    margin-left: 40px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.author{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 30px 20px 0 40px;
+}
+
+.user{
+    display: flex;
+    flex-direction: column;
+}
+
+.user span{
+    margin-left: 20px;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.review img{
+    border-radius: 50%;
+    height: 60%;
+}
+
+.name{
+    font-weight: 800;
+}
+
+.verified{
+    color: hsl(333, 80%, 67%);
+}
+
+@media only screen and (max-width: 1024px){
+    #rates{
+        width: 400px;
+    }
+
+    #top{
+        margin-bottom: 80px;
+    }
+
+    .review{
+        width: fit-content;
+    }
+
+    .review:nth-child(1){
+        margin-left: 30px;
+    }
+
+    .review:nth-child(3){
+        margin-right: 30px;
+    }
+
+    .review:nth-child(2){
+        margin: 20px 50px 0 50px;
+    }
+
+    .attribution{
+        margin: 10px 0;
+        padding-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    
+    #container{
+        margin: 10px;
+    }
+    
+    #top{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #rates{
+        width: 80%;
+        align-items: center;
+    }
+
+    .rate:nth-child(2){
+        margin-left: 0;
+    }
+    
+    .rate:nth-child(3){
+        margin-left: 0;
+    }
+
+    #title{
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    #bot{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 80px;
+    }
+
+    .review{
+        margin-top: 100px;
+        width: 80%;
+        padding-bottom: 30px;
+    }
+
+    .review:nth-child(1){
+        margin: 100px 0 20px 0;
+    }
+
+    .review:nth-child(3){
+        margin: 20px 0;
+    }
+
+    .review:nth-child(2){
+        margin: 20px 0;
+    }
+
+    .attribution{
+        margin: 300px 0;
+        padding-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    #rates{
+        width: 100%;
+    }
+    .rate{
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    .stars-text{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #bot{
+        margin-top: 125px;
+        width: auto;
+    }
+
+    .review{
+        width: 100%;
+    }
+    
+}
