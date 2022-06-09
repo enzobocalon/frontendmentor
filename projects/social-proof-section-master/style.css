@@ -61,6 +61,7 @@ html{
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin: auto auto auto 30px;
 }
 
 #rates{
@@ -170,9 +171,19 @@ html{
     color: hsl(333, 80%, 67%);
 }
 
-@media only screen and (max-width: 1024px){
+.attribution{
+    margin-top: 60px;
+    text-align: center;
+    font-size: 11px;
+}
+
+@media only screen and (max-width: 1440px){
     #rates{
         width: 400px;
+    }
+
+    .rate{
+        width: 100%;
     }
 
     #top{
@@ -180,7 +191,7 @@ html{
     }
 
     .review{
-        width: fit-content;
+        width: 100%;
     }
 
     .review:nth-child(1){
@@ -201,7 +212,7 @@ html{
     }
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 1024px){
     
     #container{
         margin: 10px;
@@ -218,6 +229,10 @@ html{
     #rates{
         width: 80%;
         align-items: center;
+    }
+
+    .rate{
+        width: 60%;
     }
 
     .rate:nth-child(2){
@@ -259,23 +274,24 @@ html{
     }
 
     .attribution{
-        margin: 300px 0;
+        margin: 250px 0;
         padding-bottom: 10px;
     }
 }
 
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 768px){
     #rates{
-        width: 100%;
+        width: 80%;
     }
     .rate{
         font-size: 16px;
-        text-align: center;
+        width: 100%;
     }
     
     .stars-text{
         display: flex;
-        flex-direction: column;
+        flex-direction: column;      
+        margin: auto; 
     }
 
     #bot{
@@ -287,4 +303,16 @@ html{
         width: 100%;
     }
     
+    .attribution{
+        margin: 250px 0;
+        padding-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 475px)
+{
+    .attribution{
+        margin: 300px 0;
+        padding-bottom: 10px;
+    }
 }
