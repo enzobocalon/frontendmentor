@@ -14,7 +14,7 @@ Users should be able to:
 
 You can find my solution online at
 
-- Github pages []
+- Github pages [https://enzobocalon.github.io/frontendmentor/projects/order-summary-component-main]
 
 ## Tools
 
