@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100vh;
+    width: 100%;
+    background-color: hsl(0, 0%, 95%);
+    font-size: 15px;
+}
+
+#container{
+    height: 95vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#wrapper{
+    width: 80%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+.icon{
+    width: 20%;
+}
+
+#left{
+    background-color: hsl(31, 77%, 52%);
+    border-radius: 15px 0 0 15px;
+}
+
+#mid{
+    background-color: hsl(184, 100%, 22%);
+}
+
+#right{
+    background-color: hsl(179, 100%, 13%);
+    border-radius: 0 15px 15px 0;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-left: 60px;
+    margin-top: 60px;
+    height: auto;
+}
+
+.content h1{
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 3em;
+    padding: 40px 0;
+}
+
+.content p{
+    width: 80%;
+    font-family: 'Lexend Deca', sans-serif;
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 30px;
+}
+
+.content a{
+    text-decoration: none;
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: white;
+    width: 50%;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 20px;
+    font-weight: 700;
+    margin: 30px 0;
+}
+
+#left .content a:hover{
+    background-color: hsl(31, 77%, 52%);
+    color: white;
+    border: 2px solid white;
+}
+
+#mid .content a:hover{
+    background-color: hsl(184, 100%, 22%);
+    color: white;
+    border: 2px solid white;
+}
+
+#right .content a:hover{
+    background-color: hsl(179, 100%, 13%);
+    color: white;
+    border: 2px solid white;
+}
+
+#left .content a{
+    color: hsl(31, 77%, 52%);
+}
+
+#mid .content a{
+    color: hsl(184, 100%, 22%);
+}
+
+#right .content a{
+    color: hsl(179, 100%, 13%);
+}
+
+@media only screen and (max-width: 1024px){
+    #left, #mid, #right{
+        height: 110%;
+    }
+    .content a{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1010px){
+    
+    #container{
+        align-items: center;
+        height: 100%;
+        margin: 20px 0;
+    }
+    #wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 80%;
+    }
+
+    .content{
+        height: 30vh;
+        width: auto;
+    }
+
+    .content h1{
+        font-size: 2rem;
+        padding: 10px 0;
+    }
+
+    .content p{
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .content a{
+        margin: 10px 0;
+    }
+
+    #left, #mid, #right{
+        height: 60%;
+        width: 100%;
+    }
+
+    #left{
+        border-radius: 15px 15px 0 0;
+    }
+
+    #right{
+        border-radius: 0 0 15px 15px;
+    }
+
+    .icon{
+        width: 10%;
+    }
+}
+
+@media only screen and (max-width: 680px){
+    .content h1{
+        font-size: 2rem;
+        padding: 10px 0;
+    }
+
+    .content p{
+        font-size: 0.9rem;
+        width: 80%;
+    }
+
+    .content{
+        margin: 20px 0 0 20px;
+    }
+}
+
+@media only screen and (max-width: 587px){
+    .content h1{
+        font-size: 1.5rem;
+        padding: 10px 0;
+    }
+
+    .content p{
+        width: 80%;
+        line-height: 20px;
+        margin-bottom: 5px;
+    }
+
+    .content{
+        margin: 20px 0 0 20px;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    #left, #mid, #right{
+        height: 80%;
+    }
+    
+    .content a{
+        padding: 15px 0;
+    }
+}
