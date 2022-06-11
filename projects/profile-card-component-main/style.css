@@ -168,18 +168,10 @@ span, p{
 
 @media only screen and (max-height: 500px){
     #wrapper{
-        height: 70vh;
-    }
-    #pic{
-        top: 30%;
-    }
-}
-
-@media only screen and (max-height: 470px){
-    #wrapper{
         height: 80vh;
     }
     #pic{
         top: 25%;
     }
 }
+
