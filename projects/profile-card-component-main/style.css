@@ -57,7 +57,7 @@ span, p{
 
 #pic{
     position: absolute;
-    top: 39%;
+    top: 38%;
     left: auto;
     border-radius: 50%;
     border: 5px solid white
@@ -74,7 +74,7 @@ span, p{
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 #loc{
@@ -147,4 +147,22 @@ span, p{
 
 }
 
+@media only screen and (max-height: 850px){
+    #wrapper{
+       height: 50vh;
+    }
+
+    #pic{
+        top: 35%;
+    }
+}
+
+@media only screen and (max-height: 670px){
+    #wrapper{
+        height: 60vh;
+    }
+    #pic{
+        top: 32%;
+    }
+}
 
