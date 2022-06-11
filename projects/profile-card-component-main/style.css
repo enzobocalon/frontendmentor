@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Kumbh+Sans:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+html,body{
+    height: 100vh;
+    width: 100%;
+    font-size: 18px;
+}
+
+span, p{
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+#container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: hsl(185, 75%, 39%);
+    background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+    background-position: top -500px, bottom 50px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+}
+
+#fb{
+   display: flex;
+   flex-direction: column; 
+   align-items: center;
+   justify-content: center;
+}
+
+#wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height:40%;
+    margin: auto 0;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+
+
+#top img{
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+}
+
+#pic{
+    position: absolute;
+    top: 39%;
+    left: auto;
+    border-radius: 50%;
+    border: 5px solid white
+}
+
+#mid{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.profile{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+#loc{
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+#name{
+    font-weight: 700;
+}
+
+#age{
+    margin-left: 10px;
+}
+
+#desc{
+    font-size: 15px;
+}
+
+#age, .desc, #loc{
+    color: hsl(227, 10%, 46%);
+}
+
+#bot{
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 0 0 10px 10px;
+    border-top: 1px solid  hsl(0, 0%, 59%);
+    width: 100%;
+    height: auto;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    align-items: center;
+}
+
+.title{
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.desc{
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+.attribution {
+    font-size: 11px; text-align: center; 
+    color: white;
+    margin-bottom: 10px;
+}
+.attribution a {
+    color: hsl(229, 23%, 23%);
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 350px){
+    #wrapper{
+        width: 90%;
+        height: 40%;
+    }
+    
+    #pic{
+        width: 25%;
+    }
+
+}
+
+
