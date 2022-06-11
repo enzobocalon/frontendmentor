@@ -24,7 +24,7 @@ html{
 
 #wrapper{
     width: 80%;
-    height: 60%;
+    height: 70%;
     display: flex;
     flex-direction: row;
     color: white;
@@ -36,7 +36,7 @@ html{
 
 #left{
     background-color: hsl(31, 77%, 52%);
-    border-radius: 15px 0 0 15px;
+    border-radius: 10px 0 0 10px;
 }
 
 #mid{
@@ -45,7 +45,7 @@ html{
 
 #right{
     background-color: hsl(179, 100%, 13%);
-    border-radius: 0 15px 15px 0;
+    border-radius: 0 10px 10px 0;
 }
 
 .content{
@@ -54,7 +54,7 @@ html{
     align-items: left;
     margin-left: 60px;
     margin-top: 60px;
-    height: auto;
+    height: 80%;
 }
 
 .content h1{
@@ -79,7 +79,7 @@ html{
     padding: 20px 0;
     border-radius: 20px;
     font-weight: 700;
-    margin: 30px 0;
+    margin: auto 0;
 }
 
 #left .content a:hover{
@@ -113,8 +113,8 @@ html{
 }
 
 @media only screen and (max-width: 1024px){
-    #left, #mid, #right{
-        height: 110%;
+    #wrapper{
+        width: 90%;
     }
     .content a{
         width: 80%;
@@ -160,11 +160,11 @@ html{
     }
 
     #left{
-        border-radius: 15px 15px 0 0;
+        border-radius: 10px 10px 0 0;
     }
 
     #right{
-        border-radius: 0 0 15px 15px;
+        border-radius: 0 0 10px 10px;
     }
 
     .icon{
