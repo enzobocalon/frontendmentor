@@ -175,3 +175,15 @@ span, p{
     }
 }
 
+@media only screen and (max-height: 350px){
+    #wrapper{
+        height: 90vh;
+        font-size: 80%;
+    }
+    #desc{
+        font-size: 80%;
+    }
+    #pic{
+        top: 22%;
+    }
+}
