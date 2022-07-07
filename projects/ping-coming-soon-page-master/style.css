@@ -132,7 +132,6 @@ body{
 
 .social i:hover{
     background-color: var(--blue);
-    border: none;
     color: white;
 }
 
