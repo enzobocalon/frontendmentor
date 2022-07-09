@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --almost-white: hsl(0, 0%, 98%);
+    --medium-gray: hsl(0, 0%, 41%);
+    --almost-black: hsl(0, 0%, 8%);
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 18px;
+}
+
+/* navbar */
+
+nav{
+    width: 100%;
+    display: flex;
+    padding: 1.5rem 3rem;
+    align-items: center;
+    margin: 0;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--medium-gray);
+}
+
+.main-menu{
+    display: flex;
+    flex: 3;
+    margin: 0 2rem;
+}
+
+.menu-link{
+    position: relative;
+    z-index: 1;
+    margin: 0 2rem;
+    color: var(--medium-gray);
+    cursor: pointer;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: max-content;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0;
+    margin-top: 10px;
+    padding: 1rem 0;
+    border-radius: 20px;
+}
+
+.dropdown-content.open{
+    display: block;
+}
+
+.dropdown-link{
+    width: 100%;
+    cursor: pointer;
+}
+
+.dropdown-content .dropdown-link a{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+}
+
+.dropdown-content .dropdown-link a:hover{
+    background-color: hsla(0, 0%, 78%,.5);
+    
+}
+
+.login-section{
+    display: flex;
+    flex: 1;
+    gap: 2rem;
+    justify-content: flex-end;
+}
+
+.login-section #register{
+    border: 2px solid var(--medium-gray);
+    padding: .8rem 1.6rem;
+    border-radius: 1rem;
+}
+
+.arrow{
+    transition: all .3s ease;
+}
+
+.mobile-menu{
+    display: none;
+}
+.x {
+    display: none;
+}
+/* active and hover status */
+
+.dropdown:hover, .menu-link:hover, .login-section a:hover{
+    color: var(--almost-black);
+    transition: all .3s ease;
+}
+
+#features:hover .arrow, #company:hover .arrow{
+    filter: contrast(100) brightness(0);
+    transition: all .3s ease;
+}
+
+.arrow:hover{
+    filter: contrast(100) brightness(0);
+}
+
+#register:hover{
+    border: 2px solid var(--almost-black);
+}
+
+.arrow.open{
+    transform: rotate(180deg);
+}
+
+.fade{
+    display: none;
+}
+
+/* main section */
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 10rem;
+    margin-bottom: 2rem;
+    gap: 5rem;
+}
+
+aside img{
+    width: 80%;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+}
+
+.text h1{
+    width: 80%;
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+}
+
+.text p{
+    font-size: 1.2rem;
+    width: 65%;
+    margin-bottom: 2rem;
+    color: var(--medium-gray);
+    line-height: 1.5rem;
+}
+
+.text a{
+    padding: 1.2rem 2rem;
+    width: fit-content;
+    color: var(--almost-white);
+    background-color: var(--almost-black);
+    border-radius: 1rem;
+    transition: all .3s ease;
+    border: 1px solid transparent;
+}
+
+.clients{
+    margin-top: 10rem;
+}
+
+.clients img{
+    margin-right: 2rem;
+}
+
+.text a:hover{
+    color: var(--almost-black);
+    background-color: white;
+    border: 1px solid var(--almost-black);
+}
+
+/* medias */
+
+@media only screen and (max-width: 1150px){
+    .text h1{
+        font-size: 3.5rem;
+    }
+
+    .menu-link{
+        margin: 0 1rem;
+    }
+
+    .clients img{
+        margin-right: 0;
+    }
+
+    aside img{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    /* mobile menu */
+
+    .fade{
+        position: absolute;
+        height: 100%;
+        width: 80%;
+        background-color: hsla(0, 0%, 8%, 0.5);;
+    }
+
+    .fade.active{
+        display: block;
+    }
+
+    nav{
+        justify-content: space-between;
+    }
+
+    .mobile-menu{
+        display: block;
+    }
+
+    .x{
+        display: none;
+    }
+
+    .x.open{
+        display: block;
+        z-index: 2;
+    }
+
+    .main-menu{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 65vw;
+        height: 100vh;
+        background: white;
+        transform: translateX(100%);
+        transition: all .3s ease-in;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        z-index: 1;
+        margin: 0;
+    }
+
+    .main-menu.open{
+        transform: translateX(0%);
+        margin: 0;
+    }
+
+    .menu-link{
+        margin-left: 2rem;
+        margin-top: 2rem;
+    }
+
+    .dropdown-content{
+        position:initial;
+        box-shadow: none;
+    }
+
+    .login-section{
+        flex-direction: column;
+        flex: 0;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4rem;
+        width: 100%;
+    }
+
+    .login-section #register{
+        padding: .8rem 10vw;
+    }
+
+    /* layout */
+
+    main{
+        flex-direction: column-reverse;
+    }
+    aside img{
+        width: 100vw;
+    }
+
+    .text h1, .text p, .text a{
+        width: 100%;
+        text-align: center;
+    }
+
+    .clients{
+        margin-top: 4rem;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .text{
+        width: 80vw;
+    }
+
+    .text h1{
+         font-size: 2.5rem;
+    }
+
+    .text p{
+        font-size: 1rem;
+    }
+
+    .text a{
+        padding: 1rem 1.8rem;
+    }
+
+    .clients{
+        text-align: left;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 325px){
+    nav{
+        padding: 1.5rem 2rem;
+    }
+
+    .text{
+        width: 90vw;
+    }
+
+}
