@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --strong-cyan: hsl(172, 67%, 45%);
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --grayish-cyan: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --very-light-grayish-cyan: hsl(189, 41%, 97%);
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Space Mono', sans-serif;
+    background-color: var(--light-grayish-cyan);
+    color: var(--dark-grayish-cyan);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header{
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+main{
+    width: 100%;
+    height: auto;
+    border-radius: 2rem 2rem 0 0;
+    background-color: white;
+}
+
+
+.content{
+    margin: 2rem;
+    margin-bottom: .5rem;
+}
+
+.bill{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.bill img{
+    background-color: var(--very-light-grayish-cyan);
+    padding: 14px;
+    border-radius: 5px 0 0 5px;
+}
+
+.bill input{
+    width: 100%;
+    text-align: right;
+    background-color: var(--very-light-grayish-cyan);
+    padding: 4.5px;
+    font-size: 24px;
+    font-family: 'Space Mono';
+    color: var(--very-dark-cyan);
+    border-radius: 0 5px 5px 0;
+    border: 1px solid transparent;
+}
+
+.tip-section{
+    margin-top: 10px;
+    height: fit-content;
+}
+
+.tip-btn{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10%;
+    margin-bottom: 2.5rem;
+}
+
+.tip-section .tip-percentage{
+    font-size: 1.4rem;
+    font-family: 'Space Mono';
+    color: white;
+    background-color: var(--very-dark-cyan);
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    transition: all .3s ease;
+}
+
+.tip-section .custom-tip{
+    font-family: 'Space Mono';
+    color: var(--very-dark-cyan);
+    text-align: center;
+    background-color: var(--very-light-grayish-cyan);
+    font-size: 1.4rem;
+    border-radius: 10px;
+    border: 1px solid transparent;
+}
+
+.peoples{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.peoples img{
+    background-color: var(--very-light-grayish-cyan);
+    padding: 14px;
+    border-radius: 5px 0 0 5px;
+}
+
+.peoples input{
+    width: 100%;
+    text-align: right;
+    background-color: var(--very-light-grayish-cyan);
+    padding: 4px;
+    font-size: 24px;
+    font-family: 'Space Mono';
+    color: var(--very-dark-cyan);
+    border-radius: 0 5px 5px 0;
+    border: 1px solid transparent;
+}
+
+.result{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--very-dark-cyan);
+    padding: 2rem;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.result-align{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    align-items: center;
+}
+
+.result-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.final-result span{
+    font-size: 1.4rem;
+    color: var(--strong-cyan);
+}
+
+.result button{
+    border: none;
+    padding: .5rem;
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+    font-family: 'Space Mono';
+    font-size: 1.4rem;
+    border-radius: 10px;
+    transition: all .3s ease;
+}
+
+.attribution{
+    background-color: white;
+    width: 100%;
+}
+
+
+.title-error-align{
+    display: flex;
+    justify-content: space-between;
+}
+
+.error{
+    display: none;
+    color: red;
+}
+
+/* hovers */
+
+.result button:hover{
+    background: var(--light-grayish-cyan);
+}
+
+.tip-section .tip-percentage:hover{
+    background: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+}
+
+.bill input{
+    outline: 0;
+}
+
+.tip-section .custom-tip{
+    outline: 0;
+}
+
+.peoples #peoples-input{
+    outline: 0;
+}
+
+.bill #bill-input.active{
+    outline: 0;
+    border: 1px solid var(--strong-cyan);
+    border-left: 0;
+}
+
+.bill #dollar.active{
+    border: 1px solid var(--strong-cyan);
+    border-right: 0;
+}
+
+.tip-section .custom-tip:focus{
+    outline: 1px solid var(--strong-cyan);
+}
+
+.peoples input.active{
+    outline: 0;
+    border: 1px solid var(--strong-cyan);
+    border-left: 0;
+}
+
+.peoples #person.active{
+    border: 1px solid var(--strong-cyan);
+    border-right: 0;
+}
+
+.peoples input.error{
+    outline: 0;
+    border: 1px solid red;
+    border-left: 0;
+}
+
+.peoples #person.error{
+    border: 1px solid red;
+    border-right: 0;
+}
+
+.error.active{
+    display: inline;
+}
+
+@media only screen and (min-width: 1000px){
+    
+    .container{
+        height: 100vh;
+    }
+
+    header{
+        padding: 4rem 0;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 75%;
+        min-height: 45vh;
+        border-radius: 2rem;
+        margin: 2rem 0;
+    }
+    
+    .content{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 2rem;
+    }
+
+    .tip-btn{
+        grid-template-columns: 30% 30% 30%;
+        grid-template-rows: 1fr 1fr;
+        gap: 5%;
+    }
+
+    .tip-section .tip-percentage{
+        cursor: pointer;
+    }
+
+    .tip-section .tip-percentage.active{
+        background-color: var(--strong-cyan);
+        color: var(--very-dark-cyan);
+    }
+
+    .user-interface{
+        width: 50%;
+        margin-right: 2rem;
+    }
+
+    .result{
+        margin-top: 0;
+        width: 50%;
+    }
+
+    .result button{
+        margin-top: 4rem;
+        cursor: pointer;
+    }
+
+    .attribution{
+        background-color: transparent;
+    }
+}
+
+@media only screen and (min-width: 1500px){
+    main{
+        min-height: 55vh;
+        width: 70%;
+    }
+
+    .user-interface{
+        min-height: 45vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .result{
+        width: 45%;
+    }
+
+    .result button{
+        margin-top: 6rem;
+    }
+}

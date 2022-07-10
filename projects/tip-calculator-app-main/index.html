@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<div class="container">
+  
+    <header>
+      <img src="./images/logo.svg" alt="">
+    </header>
+    <main>
+      <div class="content">
+        <div class="user-interface">
+          <p>Bill</p>
+          <div class="bill">
+            <img src="./images/icon-dollar.svg" id="dollar">
+            <input type="number" placeholder="0.00" id="bill-input"></input>
+          </div>
+          <p>Select Tip %</p>
+          <div class="tip-section">
+            <div class="tip-btn">
+              <button class="tip-percentage">5%</button>
+              <button class="tip-percentage">10%</button>
+              <button class="tip-percentage">15%</button>
+              <button class="tip-percentage">25%</button>
+              <button class="tip-percentage">50%</button>
+              <input type="number" placeholder="Custom" class="custom-tip">
+            </div>
+          </div>
+          <div class="title-error-align">
+            <p style="display: inline">Number of People</p>
+            <span class="error">Can't be zero</span>
+          </div>
+          <div class="peoples">
+            <img src="./images/icon-person.svg" alt="" id="person">
+            <input type="number" placeholder="2" id="peoples-input">
+          </div>
+        </div>
+        <div class="result">
+          <div class="result-align">
+            <div class="result-text">
+              <p style="color: white">Tip Amount</p>
+              <p>/ person</p>
+            </div>
+            <div class="final-result">
+              <span id="tip-result">$ 0.00</span>
+            </div>
+          </div>
+          <div class="result-align">
+            <div class="result-text">
+              <p style="color: white">Total</p>
+              <p>/ person</p>
+            </div>
+            <div class="final-result">
+              <span id="total-result">$ 0.00</span>
+            </div>
+          </div>
+          <button id="reset-btn">RESET</button>
+        </div>
+      </div>
+  
+      
+    </main>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="http://github.com/enzobocalon" target="_blank">Enzo Bocalon</a>.
+    </div>
+</div>
+
+
+<script src="app.js"></script>
+</body>
+</html>
