@@ -55,7 +55,7 @@ const error = document.querySelector('.error')
 peoples_input.addEventListener('input', () => {
     if(peoples_input.value == ''){
         error.classList.remove('active');
-    } else if(peoples_input.value == parseInt('0')){
+    } else if(peoples_input.value == 0){
         error.classList.add('active');
     } else{
         error.classList.remove('active');
@@ -80,9 +80,9 @@ function calcBill(){
 
     tip.forEach((event) => {
         if (event.classList.contains('active')){
-            tip_value = parseInt(event.textContent.slice(0, -1))/100;
+            tip_value = parseFloat(event.textContent.slice(0, -1))/100;
         } else if(custom.value !== ''){
-            tip_value = parseInt(custom.value)/100;
+            tip_value = parseFloat(custom.value)/100;
         } 
     })
 
