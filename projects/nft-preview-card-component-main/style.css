@@ -1,5 +1,5 @@
-html{
-    height: 100vh;
+html, body{
+    height: 95vh;
     width: 100%;
     margin: 0;
 }
@@ -9,6 +9,10 @@ body{
     font-family: 'Outfit', sans-serif;
     background: hsl(217, 54%, 11%);
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 hr{
@@ -20,9 +24,9 @@ hr{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     background-color: hsl(216, 50%, 16%);
-    width: 35vh;
-    margin: 10vh auto;
+    width: 20%;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 10px 10px 10px 20px #0D1728;
@@ -163,9 +167,27 @@ a:hover{
     border-radius: 50%;
 }
 
-@media(max-width: 400px){
-    html{
-        font-size: 80%;
+@media only screen and (max-width: 1060px){
+    .preview{
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .preview{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .preview{
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .preview{
+        width: 80%;
     }
 }
 
