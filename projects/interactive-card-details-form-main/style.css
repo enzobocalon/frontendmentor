@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100vh;
+    width: 100%;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+/* CREDIT CARDS */
+
+.left-container{
+    width: 483px;
+    height: 100%;
+    background-image: url(./images/bg-main-desktop.png);
+    background-size: cover;
+    background-repeat: repeat;
+    color: white;
+}
+
+.credit-card-top{
+    position: absolute;
+    background-image: url(./images/bg-card-front.png);
+    background-repeat: no-repeat;
+    width: 447px;
+    height: 245px;
+    top: 22%;
+    left: 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 30px;
+}
+
+.credit-card-top-number{
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+}
+
+
+.credit-card-top-footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: .8rem;
+}
+
+.credit-card-bottom{
+    background-image: url(./images/bg-card-back.png);
+    width: 447px;
+    height: 245px;
+    position: absolute;
+    top: 50%;
+    left: 18.5%;
+    z-index: 0;
+}
+
+#cvc{
+    color: white;
+    z-index: 2;
+    position: absolute;
+    top: 45.5%;
+    right: 12%;
+    letter-spacing: 4px;
+    font-size: .8rem;
+}
+
+/* DATA */
+
+.right-container{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rl-container{
+    width: 50%;
+    padding-left: 4rem;
+}
+
+.rl-container button, .complete-state button{
+    width: 100%;
+    background-color: hsl(278, 68%, 11%);
+    border: none;
+    color: white;
+    font-family: 'Space Grotesk', sans-serif;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container span, .exp-cvc-container span, .cvc-container span{
+    color: hsl(278, 68%, 11%);
+    font-size: .8rem;
+    letter-spacing: 2px;
+    margin: 5px 0;
+}
+
+.input-container input, .exp-input-container input, .cvc-container input{
+    border: 1px solid hsl(270, 3%, 87%);
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+
+input::placeholder{
+    color: hsl(270, 3%, 87%);
+}
+
+.exp-cvc-container{
+    display: flex;
+    align-items: center;
+}
+
+.exp-container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.exp-input-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.exp-input-container input{
+    width: 100%;
+}
+
+.cvc-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* COMPLETE STATE */
+
+.complete-state-container{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.complete-state{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.complete-state svg{
+    margin-bottom: 1rem;
+}
+
+.complete-state #ph{
+    color: hsl(279, 6%, 55%);
+}
+
+.complete-state button{
+    margin-top: 1rem;
+}
+
+.error{
+    color: hsl(0, 100%, 66%);
+    font-size: .8rem;
+}
+
+.month-container, .year-container{
+    width: 40%;
+}
+
+.month-container .error, .year-container .error{
+    width: 100%;
+    font-size: .6rem;
+}
+
+.exp-date{
+    display: flex;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+.complete-state-container.hidden {
+    display: none;
+}
+
+button:hover{
+    opacity: .9;
+    transition: all .3s ease-in-out;
+}
+
+/* media query */
+
+@media only screen and (max-width: 1200px) {
+    .rl-container{
+        width: 75%;
+        padding-left: 10rem;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .credit-card-top{
+        left: 8%;
+    }
+    .credit-card-bottom{
+        left: 14%;
+    }
+    .rl-container{
+        width: 75%;
+        padding-left: 7rem;
+    }
+}
+
+@media only screen and (max-width: 950px){
+    .credit-card-top{
+        left: 6%;
+    }
+    .credit-card-bottom{
+        left: 12%;
+    }
+    .rl-container{
+        width: 75%;
+        padding-left: 6rem;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .container{
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        height: 100%;
+    }
+
+    .left-container{
+        width: 100%;
+        background-image: url(./images/bg-main-mobile.png);
+        height: 70%;
+    }
+
+    .credit-card-top{
+        z-index: 2;
+    }
+
+    .credit-card-bottom{
+        top: 9%;
+        left: 20%;
+        z-index: 1;
+    }
+
+    .rl-container{
+        padding-left: 0;
+    }
+    .complete-state{
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .left-container.completed{
+        height: 44%;
+    }
+}
+
+@media only screen and (max-width: 760px){
+    .right-container{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 680px){
+    .credit-card-bottom{
+        top: 9%;
+        left: 24%;
+        z-index: 1;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .credit-card-top, .credit-card-bottom{
+        width: 400px;
+        border-radius: 25px;
+    }
+}
+
+@media only screen and (max-width: 550px){
+    .credit-card-top, .credit-card-bottom{
+        width: 350px;
+        border-radius: 25px;
+    }
+}
+
+@media only screen and (max-width: 475px){
+    .credit-card-bottom{
+        top: 9%;
+        left: 18%;
+        z-index: 1;
+    }
+
+    .credit-card-top{
+        left: 3%;
+    }
+
+    #cvc{
+        right: 6%;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    .credit-card-top, .credit-card-bottom{
+        width: 300px;
+    }
+
+    #card-number{
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 340px){
+    .credit-card-bottom{
+        top: 9%;
+        left: 12%;
+        z-index: 1;
+    }
+
+    .credit-card-top{
+        left: 1%;
+    }
+
+    #cvc{
+        right: 0;
+        top: 46.5%;
+        font-size: .6rem;
+    }
+}
