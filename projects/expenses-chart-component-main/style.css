@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, html{
+  background-color: hsl(27, 66%, 92%);
+  height: 100%;
+  width: 100%;
+  font-family: 'DM Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+main {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+.top{
+  background-color: hsl(10, 79%, 65%);
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px;
+}
+
+.top-text h2{
+  margin-top: 10px;
+}
+
+.bottom{
+  background-color: hsl(33, 100%, 98%);
+  margin-top: 1rem;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.bottom h2{
+  color: hsl(25, 47%, 15%);
+}
+
+.chart{
+  display: flex;
+  gap: 10px;
+}
+
+.day{
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 50px 0 20px 0;
+}
+
+.price{
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  background-color: hsl(25, 47%, 15%);
+  padding: 4px;
+  color: white;
+  border-radius: 4px;
+  font-weight: 700;
+  left: 50%;
+  top: -35px;
+  transform: translateX(-50%);
+  transition: all .3s ease;
+}
+
+.price.active{
+  opacity: 1;
+  transition: all .3s ease;
+}
+
+.bar{
+  background-color: hsl(10, 79%, 65%);
+  margin: 0 auto;
+  width: 100%;
+  max-width: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  transition: all .3s ease;
+}
+
+.bar:hover{
+  transition: all .3s ease;
+  background-color: hsla(10, 79%, 65%, .8);
+}
+
+.mon {
+  height: 40px;
+}
+
+.tue {
+  height: 80px;
+}
+
+.wed {
+  height: 120px;
+  background-color: hsl(186, 34%, 60%);
+}
+
+.wed:hover{
+  background-color: hsla(186, 34%, 60%, .8);
+}
+
+.thu {
+  height: 85px;
+}
+
+.fri {
+  height: 60px;
+}
+
+.sat {
+  height: 110px;
+}
+
+.sun {
+  height: 90px;
+}
+
+.total {
+  border-top: 2px solid hsl(27, 66%, 92%);
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.total-text span{
+  color: hsl(28, 10%, 53%);
+}
+
+.total-text h1{
+  font-size: 2.2rem;
+}
+
+.total-month{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
