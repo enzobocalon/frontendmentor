@@ -18,4 +18,3 @@ wed.addEventListener('click', () => {
 thu.addEventListener('click', () => {
   toggleClass(thu);
 })
-
