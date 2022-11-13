@@ -99,6 +99,10 @@ button {
 }
 
 @media (max-width: 639px){
+  main{
+    max-width: 450px;
+  }
+
   .left{
     background-image: url(./images/image-product-mobile.jpg);
     border-radius: 12px 12px 0 0;
