@@ -1,4 +1,4 @@
-<h1 align="center"># Frontend Mentor - Results summary component</h1>
+<h1 align="center">Frontend Mentor - Results summary component</h1>
 
 ## The Challenge
 
